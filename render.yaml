@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: assassin-api
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn paypal_gate:app
